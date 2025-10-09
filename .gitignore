@@ -3,3 +3,5 @@
 .cursor/rules/GameMechanics.mdc
 .cursor/rules/HotPotatoMod.mdc
 bin/**
+obj/Debug/net48/lizardOnBack.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net48/lizardOnBack.GeneratedMSBuildEditorConfig.editorconfig
