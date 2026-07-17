@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uAp5zAOMjH0=",
+  "dgSpecHash": "9jcdwJrg19A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Shan_\\OneDrive\\source\\repos\\Rainworld-Mods\\背蜥蝓生\\lizardOnBack.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/deck/Source/repos/Rainworld-Mods/背蜥蝓生/lizardOnBack.csproj",
+  "expectedPackageFiles": [
+    "/home/deck/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/home/deck/.nuget/packages/microsoft.netframework.referenceassemblies.net48/1.0.3/microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

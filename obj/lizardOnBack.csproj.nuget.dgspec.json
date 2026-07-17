@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shan_\\OneDrive\\source\\repos\\Rainworld-Mods\\背蜥蝓生\\lizardOnBack.csproj": {}
+    "/home/deck/Source/repos/Rainworld-Mods/背蜥蝓生/lizardOnBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shan_\\OneDrive\\source\\repos\\Rainworld-Mods\\背蜥蝓生\\lizardOnBack.csproj": {
+    "/home/deck/Source/repos/Rainworld-Mods/背蜥蝓生/lizardOnBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shan_\\OneDrive\\source\\repos\\Rainworld-Mods\\背蜥蝓生\\lizardOnBack.csproj",
+        "projectUniqueName": "/home/deck/Source/repos/Rainworld-Mods/背蜥蝓生/lizardOnBack.csproj",
         "projectName": "LizardOnBack",
-        "projectPath": "C:\\Users\\Shan_\\OneDrive\\source\\repos\\Rainworld-Mods\\背蜥蝓生\\lizardOnBack.csproj",
-        "packagesPath": "C:\\Users\\Shan_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shan_\\OneDrive\\source\\repos\\Rainworld-Mods\\背蜥蝓生\\obj\\",
+        "projectPath": "/home/deck/Source/repos/Rainworld-Mods/背蜥蝓生/lizardOnBack.csproj",
+        "packagesPath": "/home/deck/.nuget/packages/",
+        "outputPath": "/home/deck/Source/repos/Rainworld-Mods/背蜥蝓生/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Shan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/deck/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net48"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,13 +37,20 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net48": {
           "targetAlias": "net48",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/nix/store/wwbh38sd57i6dv91pqr8czc1mj5sm51h-dotnet-sdk-8.0.422/share/dotnet/sdk/8.0.422/RuntimeIdentifierGraph.json"
         }
       }
     }

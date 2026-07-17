@@ -12,33 +12,41 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if not exist &quot;$(ProjectDir)mod\plugins&quot; mkdir &quot;$(ProjectDir)mod\plugins&quot;" />
-    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)mod\plugins\&quot;" />
-    <Exec Command="copy /Y &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)mod\plugins\&quot;" />
+    <Exec
+      Command="mkdir -p &quot;$(ProjectDir)mod/plugins&quot;" />
+    <Exec Command="cp -f &quot;$(TargetPath)&quot; &quot;$(ProjectDir)mod/plugins/&quot;" />
+    <Exec
+      Command="cp -f &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)mod/plugins/&quot;" />
   </Target>
 
-  <ItemGroup>
-    <!-- Rain World 核心引用 -->
-    <Reference
-      Include="C:\Program Files (x86)\Steam\steamapps\common\Rain World\RainWorld_Data\Managed\*.dll" />
-    <Reference
-      Include="C:\Program Files (x86)\Steam\steamapps\common\Rain World\BepInEx\plugins\*.dll" />
-    <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\Rain World\BepInEx\core\*.dll" />
-    <Reference
-      Include="C:\Program Files (x86)\Steam\steamapps\common\Rain World\BepInEx\utils\*.dll" />
+  <!--
+    路径配置：
+    设置环境变量 RW_PATH 指向 Rain World 安装目录即可跨平台使用。
+  -->
+  <PropertyGroup>
+    <RWPath Condition="'$(RWPath)' == ''">/home/deck/.local/share/Steam/steamapps/common/Rain World/</RWPath>
+  </PropertyGroup>
 
-    <!-- MOD 依赖 -->
-    <Reference
-      Include="C:\Program Files (x86)\Steam\steamapps\workshop\content\312520\3388224007\plugins\*.dll" />
-    <Reference
-      Include="C:\Program Files (x86)\Steam\steamapps\workshop\content\312520\2944727862\plugins\*.dll" />
-  </ItemGroup>
-
+  <PropertyGroup>
+    <WorkshopPath Condition="'$(WorkshopPath)' == ''">
+      /home/deck/.local/share/Steam/steamapps/workshop/content/312520/</WorkshopPath>
+  </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="exemple\**" />
-    <EmbeddedResource Remove="exemple\**" />
-    <None Remove="exemple\**" />
+    <Reference Include="$(RWPath)/RainWorld_Data/Managed/*.dll" />
+    <Reference Include="$(RWPath)/BepInEx/plugins/*.dll" />
+    <Reference Include="$(RWPath)/BepInEx/core/*.dll" />
+
+    <Reference Include="$(RWPath)/BepInEx/utils/*.dll"
+      Condition="Exists('$(RWPath)/BepInEx/utils/')" />
   </ItemGroup>
+  <!-- MOD 依赖 -->
+  <ItemGroup>
+    <Reference
+      Include="$(WorkshopPath)/3388224007/plugins/*.dll" /><!-- Meadow -->
+    <Reference
+      Include="$(WorkshopPath)/2944727862/plugins/*.dll" /><!-- Config -->
+  </ItemGroup>
+
 
 </Project>
