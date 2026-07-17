@@ -1,0 +1,13 @@
+﻿# 自动处理行结尾
+* text=auto
+
+# 对于特定文件类型的特殊处理
+*.cs text eol=lf
+*.json text eol=lf
+*.sln text eol=lf
+*.csproj text eol=lf
+
+# 二进制文件
+*.dll binary
+*.pdb binary
+*.png binary
